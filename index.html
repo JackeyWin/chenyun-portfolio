@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>陈云 · CHEN YUN | 产品设计师 Portfolio</title>
+  <meta name="description" content="陈云个人作品集：产品策略师 × UI 设计师 × 影像导演，7 年 B/G/C 端数字化产品设计经验。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+
+  <!-- Loader -->
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+      <div class="loader-name"><span>C</span><span>H</span><span>E</span><span>N</span><span class="sp"></span><span>Y</span><span>U</span><span>N</span></div>
+      <div class="loader-bar"><i id="loaderBar"></i></div>
+      <div class="loader-pct" id="loaderPct">0%</div>
+    </div>
+  </div>
+
+  <!-- Custom Cursor -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- Starfield -->
+  <canvas id="stars" aria-hidden="true"></canvas>
+  <div class="top-grad" aria-hidden="true"></div>
+  <div class="bg-orbs" aria-hidden="true"><i class="orb orb-a"></i><i class="orb orb-b"></i><i class="orb orb-c"></i></div>
+
+  <!-- Nav -->
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo" data-hover>
+        <svg viewBox="0 0 32 32" width="30" height="30" aria-hidden="true"><circle cx="16" cy="16" r="14" fill="none" stroke="#2de2e6" stroke-width="2.5"/><path d="M20.5 12.5a5.5 5.5 0 1 0 0 7" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/></svg>
+        <span>陈云<em>CHEN YUN</em></span>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#works" data-hover>项目案例</a>
+        <a href="#albums" data-hover>品牌画册</a>
+        <a href="./graphic.html" data-hover>平面设计</a>
+        <a href="#about" data-hover>关于我</a>
+        <a href="#contact" data-hover>联系</a>
+      </nav>
+      <a href="#contact" class="btn btn-cyan nav-cta" data-hover>开始合作</a>
+      <button class="nav-burger" id="navBurger" aria-label="菜单" data-hover><i></i><i></i><i></i></button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================= Hero ================= -->
+    <section class="hero" id="hero">
+      <div class="hero-glow" aria-hidden="true"></div>
+
+      <div class="hero-deco hero-figure-l" data-float="1" aria-hidden="true">
+        <div class="deco-core">
+          <svg viewBox="0 0 120 120" class="deco-gem">
+            <defs>
+              <linearGradient id="gemG" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#2de2e6"/><stop offset=".55" stop-color="#8b5cf6"/><stop offset="1" stop-color="#f471b5"/>
+              </linearGradient>
+            </defs>
+            <polygon points="60,10 104,40 88,102 32,102 16,40" fill="none" stroke="url(#gemG)" stroke-width="2.2" stroke-linejoin="round"/>
+            <polygon points="60,26 90,45 79,90 41,90 30,45" fill="rgba(45,226,230,.07)" stroke="url(#gemG)" stroke-width="1.4" stroke-linejoin="round"/>
+            <path d="M60 10v16M104 40l-14 5M16 40l14 5M32 102l9-12M88 102l-9-12" stroke="url(#gemG)" stroke-width="1.2" opacity=".7"/>
+            <circle cx="60" cy="58" r="7" fill="url(#gemG)"/>
+          </svg>
+          <i class="deco-ring r1"></i>
+          <i class="deco-ring r2"></i>
+          <i class="deco-dot d1"></i><i class="deco-dot d2"></i><i class="deco-dot d3"></i>
+        </div>
+      </div>
+      <figure class="hero-figure hero-figure-r" data-float="2" aria-hidden="true">
+        <img src="./assets/portrait-ext.png?v=20260907" alt="">
+        <i class="figure-ring ring-purple"></i>
+      </figure>
+
+      <div class="hero-content">
+        <p class="hero-hi reveal"><i class="pulse-dot"></i>你好，我是陈云 · 产品设计师</p>
+        <h1 class="hero-title">
+          <span class="ht-line reveal">DESIGN</span>
+          <span class="ht-line reveal">PORT<span class="ht-badge">FOLIO</span></span>
+        </h1>
+        <p class="hero-sub reveal">产品策略师 × UI 设计师 × 影像导演<br>用产品思维做设计，用设计能力落地产品。</p>
+        <div class="hero-cta reveal">
+          <a href="#works" class="btn btn-cyan btn-lg" data-hover>探索作品</a>
+          <a href="#about" class="btn btn-ghost btn-lg" data-hover>了解我</a>
+        </div>
+        <div class="hero-stats reveal">
+          <div class="hstat"><b><span class="count" data-to="8">0</span><small>+</small></b><span>产品项目</span></div>
+          <div class="hstat"><b><span class="count" data-to="1300">0</span><small>+</small></b><span>服务企业</span></div>
+          <div class="hstat"><b><span class="count" data-to="90">0</span><small>%+</small></b><span>设计还原度</span></div>
+        </div>
+      </div>
+
+      <div class="scroll-hint" aria-hidden="true"><span>SCROLL</span><i></i></div>
+    </section>
+
+    <!-- ================= Ticker ================= -->
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track" id="tickerTrack">
+        <span>UI/UX 设计</span><i>◆</i><span>产品策略</span><i>◆</i><span>B/G/C 端产品</span><i>◆</i><span>AI 提效</span><i>◆</i><span>品牌视觉</span><i>◆</i><span>IP 设计</span><i>◆</i><span>画册设计</span><i>◆</i><span>Vibe Coding</span><i>◆</i><span>视频剪辑</span><i>◆</i>
+      </div>
+    </div>
+
+    <!-- ================= About (第二屏) ================= -->
+    <section class="about" id="about">
+      <div class="section-head">
+        <p class="sec-tag reveal">— 关于我 —</p>
+        <h2 class="sec-title reveal">ABOUT <em>ME</em></h2>
+      </div>
+      <div class="about-card reveal">
+        <div class="about-img" aria-hidden="true"><img src="./assets/portrait.png?v=20260907b" alt="陈云形象"></div>
+        <div class="about-body">
+          <p class="about-hi">Hi, I am Chen Yun!</p>
+          <p class="about-lead">兼具 <b>7 年设计功底</b>与产品经验的产品设计师——「60% 产品策略师 + 30% UI 设计师 + 10% 影像导演」的复合体。</p>
+          <p>设计让我构建坚实的视觉地基；产品角色让我始终对齐用户需求与商业目标；视频剪辑是我讲述产品故事的扩音器。从环保监管到亲子教育，从 CRM/ERP 到 AI 搜索优化，我参与并推动了多个行业数字化产品的落地。</p>
+          <div class="about-stats">
+            <div class="astat"><b>8<small>+</small></b><span>年设计经验</span></div>
+            <div class="astat"><b>1300<small>+</small></b><span>服务企业</span></div>
+            <div class="astat"><b>90<small>%+</small></b><span>设计还原度</span></div>
+          </div>
+          <div class="about-tags"><span>产品策略</span><span>UI/UX 设计</span><span>品牌视觉</span><span>AI 提效</span><span>IP 设计</span><span>视频剪辑</span></div>
+        </div>
+      </div>
+      <!-- 横向工作经历时间轴 -->
+      <div class="htl">
+        <div class="htl-rail" aria-hidden="true"><i></i><i></i><i></i></div>
+        <div class="htl-grid">
+          <div class="htl-card reveal" data-hover>
+            <span class="htl-date">2021.08 – 2026.03</span>
+            <h4>UI设计+产品经理</h4>
+            <span class="htl-co">苏州优乐蜂环保科技有限公司</span>
+            <p>主导 6 个 Web 后台、5 个微信小程序、1 个安卓 App 的 UI/UX 设计；从 0 到 1 负责公司官网、2 个业务系统与 1 个小程序的产品落地；服务企业累计 1300+ 家。</p>
+          </div>
+          <div class="htl-card reveal" data-hover>
+            <span class="htl-date">2020.07 – 2021.08</span>
+            <h4>设计运营</h4>
+            <span class="htl-co">苏州成文留学培训服务有限公司</span>
+            <p>负责品牌宣传、市场活动视觉输出及公众号运营；协助校长完成日常行政事务，对接市场与教学部门，支持内部协作效率提升。</p>
+          </div>
+          <div class="htl-card reveal" data-hover>
+            <span class="htl-date">2018.07 – 2020.07</span>
+            <h4>UI 设计 + 公众号运营</h4>
+            <span class="htl-co">苏州荷马网络科技有限公司</span>
+            <p>负责「荷马优选」小程序整体视觉风格定义、交互优化与页面结构重构；制定企业 VI 视觉识别系统，推动品牌形象统一升级。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Card Fan ================= -->
+    <section class="fan" id="fan">
+      <div class="fan-stage">
+        <article class="fcard fcard-l" data-hover>
+          <a class="fcard-link" href="https://yxzf.unicle.com.cn/" target="_blank" rel="noopener" aria-label="宜兴环境管理系统"></a>
+          <header><span class="fcard-ava"><img src="./assets/portrait-ext.png?v=20260907" alt=""></span><div><b>宜兴环境管理系统</b><span>@G端监管 · 已验证 ✓</span></div></header>
+          <div class="fcard-img"><img src="./assets/covers/project-yixing.png" alt="宜兴环境管理标准化系统封面"></div>
+          <footer><div><span>服务企业</span><b>1200+ 家</b></div><div><span>无锡市首个</span><b>危废智慧管理</b></div></footer>
+        </article>
+        <article class="fcard fcard-c" data-hover>
+          <a class="fcard-link" href="./project-qingwow.html" aria-label="轻WOW健身商城"></a>
+          <header><span class="fcard-ava"><img src="./assets/qingwow/logo.png" alt=""></span><div><b>轻 WOW 健身商城</b><span>@C端电商 · 已验证 ✓</span></div></header>
+          <div class="fcard-img"><img src="./assets/covers/project-qingwow.png" alt="轻wow健身商城封面"></div>
+          <footer><div><span>计步准确率</span><b>97.8%</b></div><div><span>运动+电商</span><b>完整闭环</b></div></footer>
+        </article>
+        <article class="fcard fcard-r" data-hover>
+          <a class="fcard-link" href="./project-geo.html" aria-label="GEO排名优化系统"></a>
+          <header><span class="fcard-ava"><img src="./assets/ip/bee-coin.png" alt=""></span><div><b>GEO 排名优化系统</b><span>@AI SaaS · 已验证 ✓</span></div></header>
+          <div class="fcard-img"><img src="./assets/covers/project-geo.png" alt="GEO企业排名优化系统封面"></div>
+          <footer><div><span>开发方式</span><b>Vibe Coding</b></div><div><span>AI 搜索</span><b>排名监测</b></div></footer>
+        </article>
+      </div>
+    </section>
+
+    <!-- ================= Process / How I Work ================= -->
+    <section class="process" id="process">
+      <div class="section-head">
+        <p class="sec-tag reveal">— 工作方式 —</p>
+        <h2 class="sec-title reveal">HOW I <em>WORK</em></h2>
+      </div>
+      <div class="process-row">
+        <div class="pstep reveal" data-hover>
+          <div class="pstep-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></div>
+          <b>01 需求洞察</b><p>用户访谈 / 竞品分析 / 业务流程梳理，输出可执行需求池</p>
+        </div>
+        <div class="pstep reveal" data-hover>
+          <div class="pstep-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><path d="M17.5 14v7M14 17.5h7"/></svg></div>
+          <b>02 原型验证</b><p>Axure 低保真原型，快速验证产品逻辑与交互路径</p>
+        </div>
+        <div class="pstep reveal" data-hover>
+          <div class="pstep-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7a4.95 4.95 0 0 0-7-7l-7 7 7 7z"/><path d="M9 8l7 7"/><path d="M5 19h14"/></svg></div>
+          <b>03 高保真设计</b><p>Figma 设计系统 + 高保真界面，还原度保持 90%+</p>
+        </div>
+        <div class="pstep reveal" data-hover>
+          <div class="pstep-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5L3 21l4.5-1.5M14 4l6 6L8.5 21.5a2.1 2.1 0 0 1-3-3L14 4z"/><path d="M13 7l4 4"/></svg></div>
+          <b>04 交付跟进</b><p>需求评审 / 跨部门协同 / 测试验收，保障按期上线</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Works ================= -->
+    <section class="works" id="works">
+      <div class="section-head">
+        <p class="sec-tag reveal">— 项目案例 —</p>
+        <h2 class="sec-title reveal">SELECTED <em>WORKS</em></h2>
+        <p class="sec-sub reveal">覆盖 G 端监管、B 端企业管理、C 端电商与 AI SaaS 的产品设计实践。</p>
+      </div>
+      <div class="works-grid">
+        <article class="wcard reveal" data-hover>
+          <a href="./project-qingwow.html" class="wcard-link">
+            <div class="wcard-img"><img src="./assets/covers/project-qingwow.png" alt="轻WOW健身商城"></div>
+            <div class="wcard-info"><span class="wcard-cat">C 端 APP · 健身电商</span><h3>轻 WOW 健身商城</h3><p>运动健身+健康消费一体化 APP，数据追踪、饮食方案、社区激励与运动电商闭环。</p><span class="wcard-more">查看详情 →</span></div>
+          </a>
+        </article>
+        <article class="wcard reveal" data-hover>
+          <a href="https://yxzf.unicle.com.cn/" target="_blank" rel="noopener" class="wcard-link">
+            <div class="wcard-img"><img src="./assets/covers/project-yixing.png" alt="宜兴环境管理标准化系统"></div>
+            <div class="wcard-info"><span class="wcard-cat">G 端监管 · Web 后台</span><h3>宜兴环境管理标准化系统</h3><p>无锡市首个危废全流程智慧化管理系统，累计服务 1200+ 家企业。</p><span class="wcard-more">访问项目 →</span></div>
+          </a>
+        </article>
+        <article class="wcard reveal" data-hover>
+          <a href="./project-call.html" class="wcard-link">
+            <div class="wcard-img"><img src="./assets/covers/project-call.png" alt="呼叫优乐蜂"></div>
+            <div class="wcard-info"><span class="wcard-cat">B 端小程序 · 三端协同</span><h3>呼叫优乐蜂</h3><p>危废清运预约平台，扫码即运、合同可视，覆盖 1300+ 家企业。</p><span class="wcard-more">查看详情 →</span></div>
+          </a>
+        </article>
+        <article class="wcard reveal" data-hover>
+          <a href="https://bluebee.ylfenv.com/" target="_blank" rel="noopener" class="wcard-link">
+            <div class="wcard-img"><img src="./assets/covers/project-crm.png" alt="青蜂新材管理系统"></div>
+            <div class="wcard-info"><span class="wcard-cat">B 端 CRM / ERP</span><h3>青蜂新材管理系统</h3><p>打通客户、商机、合同、财务、审批全链路的一体化业务管理平台。</p><span class="wcard-more">访问项目 →</span></div>
+          </a>
+        </article>
+        <article class="wcard reveal" data-hover>
+          <a href="./project-hemayou.html" class="wcard-link">
+            <div class="wcard-img"><img src="./assets/covers/project-hemayou.png" alt="荷马优选小程序"></div>
+            <div class="wcard-info"><span class="wcard-cat">C 端小程序 · 亲子教育</span><h3>荷马优选</h3><p>亲子营地教育电商平台，负责整体视觉风格定义、交互优化与 VI 规范。</p><span class="wcard-more">查看详情 →</span></div>
+          </a>
+        </article>
+        <article class="wcard reveal" data-hover>
+          <a href="./project-geo.html" class="wcard-link">
+            <div class="wcard-img"><img src="./assets/covers/project-geo.png" alt="GEO企业排名优化系统"></div>
+            <div class="wcard-info"><span class="wcard-cat">AI / SaaS</span><h3>GEO 企业排名优化系统</h3><p>基于 Vibe Coding 完成的 AI 搜索排名优化 SaaS，支持自动发文与排名监测。</p><span class="wcard-more">查看详情 →</span></div>
+          </a>
+        </article>
+        <article class="wcard reveal" data-hover>
+          <a href="https://www.unicle.com.cn/" target="_blank" rel="noopener" class="wcard-link">
+            <div class="wcard-img"><img src="./assets/covers/project-unicle.png" alt="优乐蜂环保官网"></div>
+            <div class="wcard-info"><span class="wcard-cat">企业官网</span><h3>优乐蜂环保官网</h3><p>从 0 到 1 完成需求分析、原型设计、UI 实现及上线跟进的品牌展示官网。</p><span class="wcard-more">访问项目 →</span></div>
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <!-- ================= Albums (bookshelf + flipbook modal) ================= -->
+    <section class="albums" id="albums">
+      <div class="section-head">
+        <p class="sec-tag reveal">— 品牌画册 —</p>
+        <h2 class="sec-title reveal">BRAND <em>ALBUMS</em></h2>
+        <p class="sec-sub reveal">点击任意一本，翻开整本画册。</p>
+      </div>
+      <div class="shelf reveal" id="shelf">
+        <div class="shelf-books">
+          <button class="sbook" data-album="youlefeng" data-hover>
+            <span class="sbook-cover" style="--ar:595/807"><img src="./assets/albums/youlefeng-01.jpg" alt="优乐蜂画册封面"><i class="sbook-spine"></i></span>
+            <span class="sbook-name">优乐蜂画册</span>
+            <span class="sbook-meta">企业品牌 · 20P</span>
+          </button>
+          <button class="sbook" data-album="hema" data-hover>
+            <span class="sbook-cover" style="--ar:1/1"><img src="./assets/albums/hema-01.jpg" alt="荷马企业画册封面"><i class="sbook-spine"></i></span>
+            <span class="sbook-name">荷马企业画册</span>
+            <span class="sbook-meta">亲子品牌 · 28P</span>
+          </button>
+          <button class="sbook" data-album="changtian" data-hover>
+            <span class="sbook-cover" style="--ar:595/807"><img src="./assets/albums/changtian-01.jpg" alt="长天快运画册封面"><i class="sbook-spine"></i></span>
+            <span class="sbook-name">长天快运画册</span>
+            <span class="sbook-meta">物流品牌 · 16P</span>
+          </button>
+          <button class="sbook" data-album="chengwen" data-hover>
+            <span class="sbook-cover" style="--ar:1/1"><img src="./assets/albums/chengwen-01.jpg" alt="成文画册封面"><i class="sbook-spine"></i></span>
+            <span class="sbook-name">成文画册</span>
+            <span class="sbook-meta">留学教育 · 36P</span>
+          </button>
+        </div>
+        <div class="shelf-board" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <!-- Flipbook modal -->
+    <div class="flipbook" id="flipbook" aria-hidden="true">
+      <div class="flipbook-backdrop" data-flip-close></div>
+      <div class="flipbook-stage">
+        <div class="flipbook-head">
+          <b id="flipTitle">优乐蜂画册</b>
+          <span class="flip-hint">自动翻页中 · 点击左右两侧可手动翻页</span>
+          <button class="flip-close" id="flipClose" aria-label="关闭" data-hover>✕</button>
+        </div>
+        <div class="flipbook-body">
+          <button class="flip-arrow flip-prev" id="flipPrev" aria-label="上一页" data-hover><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>
+          <div class="book-wrap modal-book">
+            <div class="book" id="book"></div>
+            <div class="book-shadow" aria-hidden="true"></div>
+          </div>
+          <button class="flip-arrow flip-next" id="flipNext" aria-label="下一页" data-hover><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+        </div>
+        <div class="book-meta">
+          <span class="book-page" id="bookPage">01 / 20</span>
+          <div class="book-progress"><i id="bookProgress"></i></div>
+          <button class="flip-auto" id="flipAuto" data-hover>暂停自动翻页</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= Graphic Design (one-screen preview) ================= -->
+    <section class="graphic" id="graphic">
+      <div class="section-head">
+        <p class="sec-tag reveal">— 平面设计 —</p>
+        <h2 class="sec-title reveal">GRAPHIC <em>DESIGN</em></h2>
+        <p class="sec-sub reveal">海报 / 物料 / Logo / VI / IP —— 品牌视觉的另一种表达。</p>
+      </div>
+      <div class="graphic-strip reveal">
+        <a href="./graphic.html#poster" class="gcard" data-hover>
+          <span class="gcard-art art-poster"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5-9 9"/></svg></span>
+          <b>海报设计</b><span class="gcard-sub">活动与宣传海报</span>
+        </a>
+        <a href="./graphic.html#material" class="gcard" data-hover>
+          <span class="gcard-art art-material"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8l-9-5-9 5 9 5 9-5z"/><path d="M3 8v8l9 5 9-5V8"/><path d="M12 13v8"/></svg></span>
+          <b>物料设计</b><span class="gcard-sub">周边与印刷物料</span>
+        </a>
+        <a href="./graphic.html#logo" class="gcard" data-hover>
+          <span class="gcard-art art-logo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M15.5 9.5a4.5 4.5 0 1 0 0 5"/></svg></span>
+          <b>Logo 设计</b><span class="gcard-sub">品牌标志与字体</span>
+        </a>
+        <a href="./graphic.html#vi" class="gcard" data-hover>
+          <span class="gcard-art art-vi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18M8 4v5"/><circle cx="7" cy="14" r="1.6"/><path d="M12 13h6M12 16h4"/></svg></span>
+          <b>VI 设计</b><span class="gcard-sub">视觉识别系统</span>
+        </a>
+        <a href="./graphic.html#ip" class="gcard gcard-ip" data-hover>
+          <span class="gcard-art gcard-img"><img src="./assets/ip/bee-coin.png" alt="IP 设计 · 蜂蜂"></span>
+          <b>IP 设计</b><span class="gcard-sub">蜂蜂 · 40+ 动态表情</span>
+        </a>
+      </div>
+      <div class="graphic-more reveal">
+        <a href="./graphic.html" class="btn btn-ghost" data-hover>进入平面设计作品集 →</a>
+      </div>
+    </section>
+
+    <!-- ================= Toolbox ================= -->
+    <section class="tools" id="tools">
+      <div class="section-head">
+        <p class="sec-tag reveal">— 工具箱 —</p>
+        <h2 class="sec-title reveal">MY <em>TOOLBOX</em></h2>
+      </div>
+      <div class="tools-grid">
+        <div class="tool reveal" data-hover><div class="tool-inner">
+          <div class="tool-front"><img class="tool-logo" src="./assets/logos/figma.svg" alt="Figma"><b>Figma</b><p>UI/UX 设计</p></div>
+          <div class="tool-back"><p>高保真界面、交互原型、设计系统与组件库构建，团队协作与交付核心工具。</p></div>
+        </div></div>
+        <div class="tool reveal" data-hover><div class="tool-inner">
+          <div class="tool-front"><img class="tool-logo" src="./assets/logos/axure.svg" alt="Axure"><b>Axure</b><p>原型设计</p></div>
+          <div class="tool-back"><p>复杂业务流程与低保真原型输出，快速验证产品逻辑与交互路径。</p></div>
+        </div></div>
+        <div class="tool reveal" data-hover><div class="tool-inner">
+          <div class="tool-front"><img class="tool-logo" src="./assets/logos/illustrator.svg" alt="Illustrator"><b>Illustrator</b><p>品牌 / IP 设计</p></div>
+          <div class="tool-back"><p>品牌 VI、Logo、吉祥物 IP、表情包、印刷物料与矢量插画创作。</p></div>
+        </div></div>
+        <div class="tool reveal" data-hover><div class="tool-inner">
+          <div class="tool-front"><img class="tool-logo" src="./assets/logos/photoshop.svg" alt="Photoshop"><b>Photoshop</b><p>视觉合成</p></div>
+          <div class="tool-back"><p>电商详情页、海报、活动物料、图片精修与视觉特效处理。</p></div>
+        </div></div>
+        <div class="tool reveal" data-hover><div class="tool-inner">
+          <div class="tool-front"><img class="tool-logo" src="./assets/logos/claude-code.png" alt="Claude Code"><b>Claude Code</b><p>AI 辅助编程</p></div>
+          <div class="tool-back"><p>深度使用 Vibe Coding 完成 GEO 项目，从需求到代码实现的高效闭环。</p></div>
+        </div></div>
+        <div class="tool reveal" data-hover><div class="tool-inner">
+          <div class="tool-front"><span class="tool-logo-pair"><img src="./assets/logos/notion.svg" alt="Notion"><img src="./assets/logos/lark.svg" alt="飞书"></span><b>Notion / 飞书</b><p>产品文档</p></div>
+          <div class="tool-back"><p>PRD 撰写、需求池管理、项目进度跟踪与团队知识库沉淀。</p></div>
+        </div></div>
+        <div class="tool reveal" data-hover><div class="tool-inner">
+          <div class="tool-front"><img class="tool-logo" src="./assets/logos/ai-tools.svg" alt="AI 设计工具"><b>AI 设计工具</b><p>GPT / Figma AI</p></div>
+          <div class="tool-back"><p>GPT Image、Figma AI、UXbot、Seedream 等工具辅助视觉创意与素材生成。</p></div>
+        </div></div>
+        <div class="tool reveal" data-hover><div class="tool-inner">
+          <div class="tool-front"><img class="tool-logo" src="./assets/logos/premiere.svg" alt="Premiere"><b>Premiere</b><p>视频剪辑</p></div>
+          <div class="tool-back"><p>企业宣传片、活动短片、价值观视频与社交媒体短视频剪辑。</p></div>
+        </div></div>
+        <div class="tool reveal" data-hover><div class="tool-inner">
+          <div class="tool-front"><img class="tool-logo" src="./assets/logos/trae.png" alt="TRAE"><b>TRAE</b><p>AI 编程助手</p></div>
+          <div class="tool-back"><p>AI 原生 IDE，深度用于 Vibe Coding、产品原型开发与前端实现的高效闭环。</p></div>
+        </div></div>
+        <div class="tool reveal" data-hover><div class="tool-inner">
+          <div class="tool-front"><img class="tool-logo" src="./assets/logos/sketch.png" alt="Sketch"><b>Sketch</b><p>界面设计</p></div>
+          <div class="tool-back"><p>矢量界面设计工具，用于 UI/UX 设计、原型构建与设计系统沉淀。</p></div>
+        </div></div>
+      </div>
+    </section>
+
+    <!-- ================= Testimonials ================= -->
+    <section class="quotes" id="quotes">
+      <div class="section-head">
+        <p class="sec-tag reveal">— 合作反馈 —</p>
+        <h2 class="sec-title reveal">KIND <em>WORDS</em></h2>
+      </div>
+      <div class="quotes-grid">
+        <blockquote class="quote reveal" data-hover><i>“</i><p>陈云的设计不仅让我们的监管平台变得专业、易用，更重要的是她能把复杂的环保业务流程梳理得非常清晰。项目获得了无锡市首个危废全流程智慧化管理系统称号。</p><footer><b>宜兴生态环境管理局</b><span>项目合作方</span></footer></blockquote>
+        <blockquote class="quote reveal" data-hover><i>“</i><p>从原型到 UI 再到上线跟进，陈云展现出极强的产品 Owner 意识，设计还原度一直保持在 90% 以上，是我们团队最可靠的设计伙伴。</p><footer><b>优乐蜂产品负责人</b><span>直属上级</span></footer></blockquote>
+        <blockquote class="quote reveal" data-hover><i>“</i><p>她创作的优乐蜂 IP 形象活泼有记忆点，表情包和周边物料广受好评，让一家环保科技公司拥有了温暖、可亲近的品牌人格。</p><footer><b>优乐蜂品牌市场团队</b><span>协作部门</span></footer></blockquote>
+      </div>
+    </section>
+
+    <!-- ================= Contact ================= -->
+    <section class="contact" id="contact">
+      <div class="contact-glow" aria-hidden="true"></div>
+      <div class="section-head">
+        <p class="sec-tag reveal">— 联系我 —</p>
+        <h2 class="sec-title reveal">LET'S <em>BUILD</em> IT</h2>
+        <p class="sec-sub reveal">有项目想法？让我们一起把它实现。</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <div class="citem"><span>电话 / 微信</span><a href="tel:15152327356" data-hover>15152327356</a></div>
+          <div class="citem"><span>邮箱</span><a href="mailto:1294396008@qq.com" data-hover>1294396008@qq.com</a></div>
+          <div class="citem"><span>所在地</span><b>江苏 · 苏州</b></div>
+          <div class="citem"><span>在线作品</span><b>—</b></div>
+        </div>
+        <form class="contact-form reveal" id="contactForm">
+          <div class="frow">
+            <label>姓名<input type="text" id="fName" placeholder="怎么称呼您" required></label>
+            <label>邮箱<input type="email" id="fMail" placeholder="您的邮箱" required></label>
+          </div>
+          <label>主题<input type="text" id="fSubject" placeholder="项目咨询 / 设计合作 / 其他" required></label>
+          <label>留言<textarea id="fMsg" rows="4" placeholder="请简单描述您的需求…" required></textarea></label>
+          <button type="submit" class="btn btn-cyan btn-lg" data-hover>发送消息</button>
+          <p class="form-tip" id="formTip" hidden>已为你生成邮件草稿，请在邮件客户端中发送 ✉</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <b>陈云 · CHEN YUN</b>
+        <p>产品策略师 × UI 设计师 × 影像导演</p>
+      </div>
+      <nav class="footer-links">
+        <a href="#works" data-hover>项目案例</a>
+        <a href="#albums" data-hover>品牌画册</a>
+        <a href="./graphic.html" data-hover>平面设计</a>
+        <a href="#about" data-hover>关于我</a>
+        <a href="#contact" data-hover>联系</a>
+      </nav>
+      <div class="footer-base"><span>© 2026 陈云. All rights reserved.</span><span>Designed &amp; Built with passion.</span></div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="./assets/js/main.js"></script>
+</body>
+</html>
