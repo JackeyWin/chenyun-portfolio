@@ -109,6 +109,16 @@
       </div>
     </section>
 
+    <!-- 系统实拍 -->
+    <section class="d-sec" id="screens">
+      <div class="section-head">
+        <p class="sec-tag reveal">— 系统实拍 —</p>
+        <h2 class="sec-title reveal">SYSTEM <em>SNAPSHOTS</em></h2>
+        <p class="sec-sub reveal">平台官网与总后台管理系统真实运行界面，点击可放大查看。</p>
+      </div>
+      <div class="screens-grid" id="screensGrid"></div>
+    </section>
+
     <!-- Next -->
     <section class="d-next">
       <a href="./index.html#works" class="btn btn-cyan btn-lg" data-hover>← 返回首页 · 更多案例</a>
@@ -125,7 +135,10 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-  <script>window.PROJECT = { screensDir: '', screens: null };</script>
+  <script>window.PROJECT = {
+    screensDir: './assets/geo/',
+    screens: ['01-官网首页.jpg', '02-后台登录.jpg', '03-总后台工作台.jpg', '04-客户管理.jpg', '05-代理商管理.jpg', '06-财务流水.jpg', '07-充值记录.jpg', '08-AI监控数据.jpg', '09-报告管理.jpg', '10-系统用户.jpg', '11-产品能力矩阵.jpg', '12-服务价值.jpg']
+  };</script>
   <script src="./assets/js/project.js"></script>
 </body>
 </html>
